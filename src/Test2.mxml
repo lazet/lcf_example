@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c:AbstractModule xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		   xmlns:s="library://ns.adobe.com/flex/spark" 
+		   xmlns:mx="library://ns.adobe.com/flex/mx" 
+		   xmlns:c="org.lcf.*"
+		   layout="absolute" >
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import org.lcf.util.ModuleEvent;  
+			function showC():void{
+				this.container.dispatch(new ModuleEvent("OPEN_MODULE","Test8","内部模块8","Test8.swf"));
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:Label text="第2个Tab的内容页面 注意事项"/>
+		<s:Button id="b" label="从容器内部打开新页签" click="showC()">	
+		</s:Button>
+	</s:VGroup>
+</c:AbstractModule>

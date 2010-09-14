@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300" implements="org.lcf.IEventPrefer">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import org.lcf.IContainer;
+			
+			private var c:IContainer;
+
+			[Inject(name="container")]
+			public function set container(c:IContainer){
+				this.c = c;
+			}
+			public function get container():IContainer{
+				return this.c;
+			}
+			
+			public function get preferEventListeners():Array
+			{
+				return new Array();
+			}
+		]]>
+	</fx:Script>
+	<s:TextArea text="我是一个普通的对象模块，但我能访问外部容器" editable="false"/>
+</s:Group>

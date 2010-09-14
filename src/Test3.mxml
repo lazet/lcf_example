@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c:AbstractModule xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		   xmlns:s="library://ns.adobe.com/flex/spark" 
+		   xmlns:mx="library://ns.adobe.com/flex/mx" 
+		   xmlns:c="org.lcf.*"
+		   layout="absolute" >
+
+	<fx:Script>
+		<![CDATA[
+			import org.lcf.util.GeneralBundleEvent;
+			override public function get transferOutEvents():Array{
+				return ["Send_Text"];
+			}
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				this.c.dispatch(new org.lcf.util.GeneralBundleEvent("Send_Text",inText.text));
+			}
+		]]>
+	</fx:Script>
+
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:VGroup>
+		<s:Label text="模块3,可以与外部模块如模块4，模块5进行通讯"/>
+		<s:TextInput id="inText" width="300" text="请输入要发送的内容"/>
+		<s:Button label="发送"  click="button1_clickHandler(event)"/>
+	</s:VGroup>
+</c:AbstractModule>

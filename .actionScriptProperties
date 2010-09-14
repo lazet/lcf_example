@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties mainApplicationPath="Lcf_example.mxml" projectUUID="1e0916af-c8aa-433a-aff4-bfcb463e1833" version="6">
+  <compiler additionalCompilerArguments="-locale zh_CN -keep-as3-metadata+=&quot;Inject&quot;" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="10.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="Lcf_example.mxml"/>
+  </applications>
+  <modules>
+    <module application="src/Lcf_example.mxml" destPath="Test1.swf" optimize="true" sourcePath="src/Test1.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test2.swf" optimize="true" sourcePath="src/Test2.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test3.swf" optimize="true" sourcePath="src/Test3.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test4.swf" optimize="true" sourcePath="src/Test4.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test5.swf" optimize="true" sourcePath="src/Test5.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test6.swf" optimize="true" sourcePath="src/Test6.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test7.swf" optimize="true" sourcePath="src/Test7.mxml"/>
+    <module application="src/Lcf_example.mxml" destPath="Test8.swf" optimize="true" sourcePath="src/Test8.mxml"/>
+  </modules>
+  <buildCSSFiles/>
+</actionScriptProperties>

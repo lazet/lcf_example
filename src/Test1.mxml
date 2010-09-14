@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c:AbstractModule xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		   xmlns:s="library://ns.adobe.com/flex/spark" 
+		   xmlns:mx="library://ns.adobe.com/flex/mx" 
+		   xmlns:c="org.lcf.*"
+		   layout="absolute" width="100%">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			function showC():void{
+				var d:DemoComponent = new DemoComponent();
+				this.c.put("d",d);
+				if(d.container == null)
+					log.text = "访问容器失败";
+				else
+					log.text = "访问容器成功";
+				cg.addElement(d);
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup width="100%" id="cg">
+		<mx:Text id="log" width="100%" text="模块1 "/>
+		<s:Button id="b" label="show containner" click="showC()">	
+		</s:Button>
+	</s:VGroup>
+</c:AbstractModule>
