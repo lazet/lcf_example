@@ -15,7 +15,7 @@
 			private var c:IContainer;
 
 			[Inject(name="container")]
-			public function set container(c:IContainer){
+			public function set container(c:IContainer):void{
 				this.c = c;
 			}
 			public function get container():IContainer{

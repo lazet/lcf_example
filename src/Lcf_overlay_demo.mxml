@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" creationComplete="callLater(application1_creationCompleteHandler)" xmlns:lcf="org.lcf.*">
+	
+	
+	<fx:Declarations>     
+		<!-- 将非可视元素（例如服务、值对象）放在此处   --> 
+	</fx:Declarations>   
+	<fx:Script> 
+		<![CDATA[
+			import mx.controls.Label;
+			import mx.core.IVisualElement;
+			import mx.events.FlexEvent;
+			
+			import org.lcf.*;
+			import org.lcf.util.ModuleEvent; 
+			
+			import spark.components.Label;        
+			
+			var index:int = 1;    
+			var canClose:Boolean = true;
+			
+			protected function application1_creationCompleteHandler():void
+			{
+				Security.allowDomain("*");    
+			}
+			
+			protected function button1_clickHandler(event:MouseEvent = null):void
+			{
+				if(index <= 7){    
+					//mm.open("t" + index, "模块" + index, "Test"+index+".swf",null,true,canClose);
+					mm.container.dispatch(new ModuleEvent(org.lcf.Constants.OPEN_MODULE_EVENT,"t" + index, "模块" + index, "Test"+index+".swf",canClose,true,null));
+				} 
+				index ++;
+				if(index == 8){          
+					index = 1; 
+				} 
+				canClose = true;   
+			}
+			function back():void{     
+				mm.back();
+			}
+			function forward():void{
+				mm.forward();
+			}
+		]]>
+	</fx:Script>  
+	<s:layout>
+		<s:VerticalLayout/> 
+	</s:layout>
+	<s:HGroup width="402" height="25">  
+		<s:Button label="&lt;&lt;后退" click="back()"/>
+		<s:Button label="前进&gt;&gt;" click="forward()"/>
+		<s:Button label="全部关闭" click="mm.closeAll()"/>
+		<s:Button label="关闭其他" click="if(mm.currentModuleInfo != null)mm.closeOther(mm.currentModuleInfo.moduleId)"/>
+		<s:Button label="打开新模块" click="button1_clickHandler(event)"/>
+	</s:HGroup>
+	
+	<lcf:Overlay id="mm" width="400" height="100%"/>
+</s:Application>

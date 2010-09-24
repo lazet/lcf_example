@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <actionScriptProperties mainApplicationPath="Lcf_example.mxml" projectUUID="1e0916af-c8aa-433a-aff4-bfcb463e1833" version="6">
-  <compiler additionalCompilerArguments="-locale zh_CN -keep-as3-metadata+=&quot;Inject&quot;" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="10.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+  <compiler additionalCompilerArguments="-locale zh_CN -keep-as3-metadata+=&quot;Inject&quot;" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="10.1.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
       <libraryPathEntry kind="4" path="">
@@ -14,6 +14,7 @@
   </compiler>
   <applications>
     <application path="Lcf_example.mxml"/>
+    <application path="Lcf_overlay_demo.mxml"/>
   </applications>
   <modules>
     <module application="src/Lcf_example.mxml" destPath="Test1.swf" optimize="true" sourcePath="src/Test1.mxml"/>
