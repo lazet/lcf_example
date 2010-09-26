@@ -23,7 +23,8 @@
 			      
 			protected function application1_creationCompleteHandler():void
 			{
-			  Security.allowDomain("*");    
+			  Security.allowDomain("*");  
+			  mm.container.put("loginName","zhangsan");   
 			}
      
 			protected function button1_clickHandler(event:MouseEvent = null):void

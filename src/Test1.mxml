@@ -12,10 +12,10 @@
 			function showC():void{
 				var d:DemoComponent = new DemoComponent();
 				this.c.put("d",d);
-				if(d.container == null)
-					log.text = "访问容器失败";
+				if(d.container.get("loginName") == null)
+					log.text = "访问父容器失败"; 
 				else
-					log.text = "访问容器成功";
+					log.text = "访问父容器成功:" + d.container.get("loginName");
 				cg.addElement(d);
 			}
 		]]>
