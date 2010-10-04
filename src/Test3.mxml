@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<c:AbstractModule xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<c:AbstractOuterModule xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		   xmlns:s="library://ns.adobe.com/flex/spark" 
 		   xmlns:mx="library://ns.adobe.com/flex/mx" 
 		   xmlns:c="org.lcf.*"
@@ -26,4 +26,4 @@
 		<s:TextInput id="inText" width="300" text="请输入要发送的内容"/>
 		<s:Button label="发送"  click="button1_clickHandler(event)"/>
 	</s:VGroup>
-</c:AbstractModule>
+</c:AbstractOuterModule>
